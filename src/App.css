@@ -30,3 +30,41 @@ span{
   border: 1px solid #000;
   border-radius: 50%;
 }
+.block{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.blsearch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.search{
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  outline: 0.5px solid #cccccc;
+  margin-right: 10px;
+}
+.searchs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.on{
+  margin: 10px;
+}
+p{
+  margin: 0;
+}
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

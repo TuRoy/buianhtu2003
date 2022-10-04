@@ -36,8 +36,11 @@ function modal(props) {
     }
     const deletedata = (i)=>{
         let newdata = listdata.filter((value,index) =>{return index !== i})
-        props.setData(newdata)
-    }
+         let A = window.confirm('m co chac k !!!') 
+         if(A){props.setData(newdata) }
+          props.setInputsc('')
+        }
+       
     return (
         <div>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

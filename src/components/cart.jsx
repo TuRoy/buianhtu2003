@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Cart(props) {
     let check = 'card-body'
     if(props.status == 1){
@@ -15,7 +16,9 @@ function Cart(props) {
         check = 'card-body bg-success text-white'
     }
 
+
     const openedits = (index)=>{
+        props.setToggle(true)
         props.setIndex(index)
          document.querySelector('#name').value = props.data[index].name
         document.querySelector('#date').value = props.data[index].date
@@ -25,12 +28,11 @@ function Cart(props) {
                 arrst[i].checked = true
             }
         }
-        props.setToggle(true)
     }
     return (
-        <div className="card" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={function(){openedits(props.id)}}>
+        <div  className='card on' data-bs-toggle="modal" id={props.id} data-bs-target="#exampleModal" onClick={function(){openedits(props.id)}}>
             <div className={check}>
-               <p>{props.name}</p>
+               <p>{props.name}</p> <br />
                <p>{props.date}</p>
             </div>
         </div>
