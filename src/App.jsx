@@ -55,9 +55,14 @@ function App() {
       })
       setFilter([])
       setData(datafilter)
-    } else {
+    } else if(index==5){
+      setFilter([])
+    } else{
       datafilter = datafilter.filter(value => value.status == index)
-      setFilter(datafilter)
+      if(datafilter.length == 0){
+        alert('trong !!!')
+      }
+       setFilter(datafilter)
     }
   }
 
@@ -80,7 +85,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className='app'>
       <button type="button" onClick={openmodal} className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
       </button>
@@ -113,7 +118,7 @@ function App() {
       {/* listdrop filter */}
       <div className='block'>
         <div className="btn-group">
-          <button type="button" className="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Filter
           </button>
           <ul className="dropdown-menu">
